@@ -1,0 +1,48 @@
+.appointment-card {
+    max-width: 300px;
+    margin-left: 35px;
+    margin-top: 40px;
+    max-height: 300px;
+    margin-bottom: 20px;
+    background-color:#1e88e5;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   
+}
+.date-card {
+  max-width: 300px;
+  margin-left: 35px;
+  margin-top: 40px;
+  max-height: 300px;
+  margin-bottom: 20px;
+  background-color: #d50000;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  
+}
+.time-card {
+  max-width: 300px;
+  margin-left: 35px;
+  margin-top: 40px;
+  max-height: 300px;
+  margin-bottom: 20px;
+  background-color: #6d4c41 ;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}  
+.surgery-card {
+  max-width: 300px;
+  margin-left: 35px;
+  margin-top: 40px;
+  max-height: 300px;
+  margin-bottom: 20px;
+  background-color: #1e88e5;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}  
+.main-content
+{
+   // overwrite inline styles
+   --offset-bottom: auto!important;
+   --overflow: hidden;
+   overflow: auto;
+   &::-webkit-scrollbar {
+     display: none;
+   }
+}
