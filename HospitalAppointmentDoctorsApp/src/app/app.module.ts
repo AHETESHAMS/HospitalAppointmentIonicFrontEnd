@@ -13,12 +13,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, MaterialModule, BrowserAnimationsModule,
     HttpClientModule,
-    IonicStorageModule.forRoot()],
+    IonicStorageModule.forRoot(),ReactiveFormsModule],
   providers: [
     StatusBar,
     SplashScreen,
