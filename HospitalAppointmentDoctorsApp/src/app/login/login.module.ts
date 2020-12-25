@@ -7,23 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
-import { MaterialModule } from '../material.module';
-import { Router } from '@angular/router';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule,
-    MaterialModule
+    LoginPageRoutingModule
   ],
   declarations: [LoginPage]
 })
-export class LoginPageModule {
-  constructor(private router: Router) {}
-  login()
-  {
-    console.log("Inside login");
-    this.router.navigate(['/dashboard']);
-  }
-}
+export class LoginPageModule {}

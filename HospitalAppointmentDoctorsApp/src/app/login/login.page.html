@@ -1,29 +1,47 @@
-<ion-header>
- 
-</ion-header>
 
-<ion-content>
-  <div>
-    <mat-card class="example-card">
-      <div>
-        <h1 style="text-align: center;font-weight: bold;">Welcome Back!</h1>
-      </div>
-      <div>
-          <mat-form-field appearance="outline" style="width: 100%">
-            <mat-label>Email or Phone</mat-label>
-            <input matInput placeholder="Email or Phone">
-          </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="outline" style="width: 100%">
-          <mat-label>Password</mat-label>
-          <input matInput placeholder="Password" type="password">
-        </mat-form-field>
-    </div>
-    <button mat-raised-button color="primary" style=" width: 100%;" (click)="login()" >Sign In</button>
-    <div>
-      <button mat-button color="primary" style="font-size: medium; margin-top: 10px;  width: 100%;">Forgot password?</button>
-    </div>
-    </mat-card>
-    </div>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Welcome to Hospital Health System</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+ 
+  <ion-row>
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+      offset-xl="4">
+ 
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="ion-text-center">Your Account</ion-card-title>
+        </ion-card-header>
+ 
+        <ion-card-content>
+ 
+          <ion-item lines="none">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="credentials.emailId"></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label position="stacked">PhoneNumber</ion-label>
+            <ion-input type="number" placeholder="Number" name="number" [(ngModel)]="credentials.phNumber">
+            </ion-input>
+          </ion-item>
+ 
+          <ion-item lines="none">
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.password">
+            </ion-input>
+          </ion-item>
+ 
+          <ion-button (click)="login()" expand="block">Login</ion-button>
+          <ion-button expand="block" color="secondary" routerLink="/register" routerDirection="forward">Register
+          </ion-button>
+ 
+        </ion-card-content>
+      </ion-card>
+ 
+    </ion-col>
+  </ion-row>
+ 
 </ion-content>
