@@ -1,29 +1,39 @@
-<ion-header>
- 
-</ion-header>
 
-<ion-content>
-  <div>
-    <mat-card class="example-card">
-      <div>
-        <h1 style="text-align: center;font-weight: bold;">Welcome Back!</h1>
-      </div>
-      <div>
-          <mat-form-field appearance="outline" style="width: 100%">
-            <mat-label>Email or Phone</mat-label>
-            <input matInput placeholder="Email or Phone">
-          </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="outline" style="width: 100%">
-          <mat-label>Password</mat-label>
-          <input matInput placeholder="Password" type="password">
-        </mat-form-field>
-    </div>
-    <button mat-raised-button color="primary" style=" width: 100%;" (click)="login()" >Sign In</button>
-    <div>
-      <button mat-button color="primary" style="font-size: medium; margin-top: 10px;  width: 100%;">Forgot password?</button>
-    </div>
-    </mat-card>
-    </div>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Welcome to Hospital Health System</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+ 
+  <ion-row>
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+      offset-xl="4">
+ 
+      <ion-card>
+        <ion-card-header color="secondary" class="login-card-header">
+          <ion-card-title>Login</ion-card-title>
+        </ion-card-header>
+          <ion-card-content>
+            <form (ngSubmit)="login()" padding-right [formGroup]="loginForm">
+              <ion-item lines="inset">
+                <ion-label position="floating">Email</ion-label>
+                <ion-input  formControlName="emailId"></ion-input>
+              </ion-item>
+              <ion-item lines="inset">
+                <ion-label position="floating">Password</ion-label>
+                <ion-input formControlName="password" type="password"></ion-input>
+              </ion-item>
+
+              <ion-button  expand="block" type="submit" [disabled]="!loginForm.valid">Login</ion-button>
+
+
+              </form>
+          </ion-card-content>
+      </ion-card>
+ 
+    </ion-col>
+  </ion-row>
+ 
 </ion-content>
